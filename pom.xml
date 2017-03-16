@@ -24,7 +24,7 @@
     <artifactId>whoprovides</artifactId>
     <packaging>bundle</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Apache Karaf :: Custom Shell Command</name>
+    <name>Apache Karaf :: WhoProvides Shell Commands Command</name>
 
     <description>Karaf Shell Commands for Searching Bundles</description>
 

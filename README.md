@@ -1,14 +1,10 @@
-ktop
+WhoProvides
 ====
 
-Karaf Top Command
+This bundle provides the following shell commands when installed:
 
- ktop - display and update sorted information about JVM and threads.
+ bundle:find-package - locate bundles that export, or contain a specific bundle.
 
-Description:
-
- The ktop command displays key JVM metrics, and updates a sorted list
- of thread statistics. 
 
 Building from source:
 ===
@@ -20,20 +16,19 @@ To build, invoke:
 
 To install in Karaf, invoke from console:
 
- install -s mvn:com.savoirtech.karaf.commands/ktop
+ install -s bundle:install -s mvn:com.savoirtech.karaf.commands/whoprovides
 
 
-To execute command on Karaf, invoke:
+find-package Examples:
+====
 
- aetos:ktop
-
-
-To exit ktop, press control + c
+ bundle:find-package com.savoirtech.karaf.commands.whoprovides com.savoirtech.karaf.commands org.apache.camel
 
 
-Runtime Options:
+find-package Runtime Options:
 ===
 
- -t  --threads   number of threads to display. 
+ --format <format> set the report output format (use "help" to list supported formats; "list" and "table" are
+                   supported as of this writing).
  
- -u  --updates   information update interval in milliseconds.
+ -e --export-only  only show package exports.
